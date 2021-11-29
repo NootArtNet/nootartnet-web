@@ -23,30 +23,302 @@
       gtag("config", "G-6BMFQS6ZZH");
     </script>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+      html {
+        font-size: 10px;
+      }
       * {
         margin: 0;
         padding: 0;
+        font-family: "JetBrains Mono", monospace;
       }
       body {
         background-color: black;
+      }
+      header {
+        width: 1170px;
+        margin: 160px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #logo {
+        background-image: linear-gradient(
+          135deg,
+          #ffccb3 0%,
+          #b3ffcc 38%,
+          #ccb3ff 66%,
+          #ffb3e6 100%
+        );
+        width: 260px;
+        height: 260px;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
       }
-      .logo {
-        width: 300px;
-        height: 300px;
+      #logo img {
+        width: 254px;
+        height: 254px;
       }
-      @media (max-width: 800px) {
-        .logo {
-          width: 200px;
-          height: 200px;
+      #link {
+        width: 260px;
+      }
+      #link a {
+        border: none;
+        height: 56px;
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+        background-color: black;
+        border: 1px solid white;
+        transition: 0.2s;
+        font-size: 1.5rem;
+        text-decoration: none;
+        /* font-weight: normal; */
+      }
+
+      #link a:hover {
+        opacity: 0.6;
+      }
+      #link a:active {
+        opacity: 0.3;
+      }
+
+      #link span {
+        width: 8.2rem;
+        margin-left: 10px;
+        text-align: center;
+        display: block;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid rgb(50, 50, 50);
+        margin: 30px 0;
+      }
+      #introduce {
+        width: 830px;
+        color: white;
+      }
+      #introduce h2 {
+        margin-bottom: 3rem;
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+      #introduce p {
+        font-size: 1.5rem;
+      }
+      #introduce a {
+        color: white;
+        transition: 0.2s;
+      }
+      #introduce a:hover {
+        opacity: 0.5;
+      }
+      #introduce a:active {
+        opacity: 0.3;
+      }
+      main,
+      footer {
+        width: 1170px;
+        margin: auto;
+      }
+      main h2 {
+        color: white;
+        font-size: 3rem;
+        margin: 3rem 0;
+      }
+      #come {
+        margin: 160px auto;
+      }
+      #come p,
+      footer p {
+        font-size: 1.5rem;
+        text-align: center;
+        color: white;
+        margin: 60px auto;
+      }
+      .item {
+        margin-top: 120px;
+      }
+      .month {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        /* background-color: #ccb3ff; */
+      }
+      .day img {
+        width: 100%;
+        height: auto;
+        background-color: #101010;
+      }
+      .day p {
+        font-size: 1.5rem;
+        color: white;
+        margin: 1rem 0;
+      }
+
+      @media (max-width: 1200px) {
+        header {
+          width: 920px;
+          margin: 5vw auto;
+          align-items: flex-start;
+        }
+        #introduce {
+          width: 600px;
+          color: white;
+        }
+        main {
+          width: 920px;
+        }
+      }
+
+      @media (max-width: 960px) {
+        html {
+          font-size: 10px;
+        }
+        header {
+          width: 600px;
+          /* margin: 100px auto; */
+          display: block;
+        }
+
+        #left {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 60px;
+        }
+        #link {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        #link a {
+          margin-top: 0;
+        }
+        #introduce {
+          width: 600px;
+          color: white;
+        }
+        main {
+          width: 600px;
+        }
+        .month {
+          grid-gap: 20px;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        header {
+          width: 88%;
+          margin: 6vw auto;
+        }
+        #left {
+          display: block;
+          margin-bottom: 60px;
+        }
+        #introduce {
+          width: 100%;
+          color: white;
+        }
+        #logo {
+          width: 88vw;
+          height: 88vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #logo img {
+          width: 98%;
+          height: auto;
+        }
+        #link {
+          width: 88vw;
+        }
+        #link a {
+          margin-top: 20px;
+        }
+        main {
+          width: 88%;
+        }
+        .month {
+          grid-gap: 10px;
+          grid-template-columns: 1fr 1fr 1fr;
         }
       }
     </style>
   </head>
   <body>
-    <img src="./asset/logo@2x.png" alt="logo" class="logo" />
+    <header>
+      <div id="left">
+        <div id="logo">
+          <img src="./asset/logo-animation.gif" alt="logo-gif" class="logo" />
+        </div>
+        <div id="link">
+          <a href="//opensea.io/collection/nootartnet" target="_blank">
+            <img src="./asset/opensea.svg" alt="opensea-logo" /><span
+              >Buy Now</span
+            >
+          </a>
+          <a href="//twitter.com/nootartnet" target="_blank">
+            <img src="./asset/twitter.svg" alt="twitter-logo" /><span
+              >Twitter</span
+            >
+          </a>
+          <a href="//www.instagram.com/nootartnet/" target="_blank">
+            <img src="./asset/instagram.svg" alt="instagram-logo" /><span
+              >instagram</span
+            >
+          </a>
+        </div>
+      </div>
+      <div id="introduce">
+        <h2>What is NootArtNet？</h2>
+        <p>
+          NootArtNet is an experimental art project that cannot be called
+          art.<br /><br />
+
+          Why is it not called NotArtNet? <br />Because we think NootArtNet
+          looks a little more special, that's all.<br /><br />
+
+          We think that whatever you find valuable is art, even if it is a pile
+          of rubbish.<br /><br />
+
+          So, do you see this content as art? Probably yes, but most likely
+          not.<br /><br />
+
+          Whatever, it's just for fun.
+        </p>
+        <hr />
+        <p>
+          NootArtNet is a set of character images generated based on the date of
+          each day.<br /><br />
+
+          Naming scheme: ["date number(MMDD)" + "character name"], the date and
+          the character may or may not be related.<br /><br />
+
+          There are 367 images in total, only one for each image.<br /><br />
+
+          NootArtNet is only sold on
+          <a href="//opensea.io/collection/nootartnet" target="_blank"
+            >OpenSea</a
+          >.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <div id="come">
+        <hr />
+        <p>coming soon.</p>
+        <hr />
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>
